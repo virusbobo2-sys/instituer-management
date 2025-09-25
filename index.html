@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النظام الإداري للمعهد</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #1a365d, #2d3748);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            direction: rtl;
+        }
+        .login-box {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #d4af37;
+            color: #1a365d;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🏢 النظام الإداري للمعهد</h1>
+    
+    <div class="login-box">
+        <h2>🔐 تسجيل الدخول</h2>
+        <input type="text" placeholder="اسم المستخدم" id="username">
+        <input type="password" placeholder="كلمة المرور" id="password">
+        <button onclick="login()">دخول</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var message = document.getElementById('message');
+            
+            if (username === 'admin' && password === '123') {
+                message.innerHTML = '✅ تم الدخول بنجاح!';
+                message.style.color = 'green';
+            } else {
+                message.innerHTML = '❌ خطأ في البيانات!';
+                message.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
